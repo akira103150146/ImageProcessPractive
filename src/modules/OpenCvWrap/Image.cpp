@@ -57,9 +57,7 @@ void Image::thinning() {
 
     while (true) {
         Mat removeMask1 = Mat::zeros(image.rows, image.cols, CV_8U);
-
-        int rpc = 0;
-        image.forEach<uchar>([&hasRemovePixel, &removeMask1, &rpc, this](const uchar &pixel, const int *position) {
+        image.forEach<uchar>([&hasRemovePixel, &removeMask1, this](const uchar &pixel, const int *position) {
             // ONLY REMOVE WHITE PIXEL
             if (pixel == uchar(0)) {
                 return;
@@ -97,7 +95,6 @@ void Image::thinning() {
 
             if (nonZeroCount >= 2 && nonZeroCount <= 6 && (transformation == 1) && (right == 0) && (upper == 0)) {
                 removeMask1.data[centerY * image.cols + centerX] = 1;
-                rpc++;
                 hasRemovePixel = true;
             }
 
@@ -144,7 +141,6 @@ void Image::thinning() {
             int down = p4 && p6 && p8;
 
             if (nonZeroCount >= 2 && nonZeroCount <= 6 && (transformation == 1) && (left == 0) && (down == 0)) {
-//                setPixel(0, centerX, centerY);
                 removeMask2.data[centerY * image.cols + centerX] = 1;
                 hasRemovePixel = true;
             }
