@@ -125,9 +125,6 @@
 		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/include/ProcessMethod.h">
 			<Option target="ImageProcessing"/>
 		</Unit>
-		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/ProcessMethod.cpp">
-			<Option target="ImageProcessing"/>
-		</Unit>
 		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/main.cpp">
 			<Option target="ImageProcessing"/>
 		</Unit>

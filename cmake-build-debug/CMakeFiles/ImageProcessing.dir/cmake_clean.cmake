@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o"
   "CMakeFiles/ImageProcessing.dir/src/main.cpp.o"
   "CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o"
   "ImageProcessing"

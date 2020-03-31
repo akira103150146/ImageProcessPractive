@@ -123,33 +123,6 @@ ImageProcessing/fast:
 	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/build
 .PHONY : ImageProcessing/fast
 
-src/ProcessMethod.o: src/ProcessMethod.cpp.o
-
-.PHONY : src/ProcessMethod.o
-
-# target to build an object file
-src/ProcessMethod.cpp.o:
-	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o
-.PHONY : src/ProcessMethod.cpp.o
-
-src/ProcessMethod.i: src/ProcessMethod.cpp.i
-
-.PHONY : src/ProcessMethod.i
-
-# target to preprocess a source file
-src/ProcessMethod.cpp.i:
-	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.i
-.PHONY : src/ProcessMethod.cpp.i
-
-src/ProcessMethod.s: src/ProcessMethod.cpp.s
-
-.PHONY : src/ProcessMethod.s
-
-# target to generate assembly for a file
-src/ProcessMethod.cpp.s:
-	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.s
-.PHONY : src/ProcessMethod.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -213,9 +186,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ImageProcessing"
 	@echo "... edit_cache"
-	@echo "... src/ProcessMethod.o"
-	@echo "... src/ProcessMethod.i"
-	@echo "... src/ProcessMethod.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

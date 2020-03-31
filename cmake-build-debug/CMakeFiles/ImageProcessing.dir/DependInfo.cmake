@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/akira/CLionProjects/ImageProcessPractive/src/ProcessMethod.cpp" "/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o"
   "/home/akira/CLionProjects/ImageProcessPractive/src/main.cpp" "/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles/ImageProcessing.dir/src/main.cpp.o"
   "/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.cpp" "/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o"
   )
