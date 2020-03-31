@@ -56,7 +56,10 @@ void Image::thinning() {
     bool hasRemovePixel = false;
 
     while (true) {
-        image.forEach<uchar>([&hasRemovePixel, this](const uchar &pixel, const int *position) {
+        Mat removeMask1 = Mat::zeros(image.rows, image.cols, CV_8U);
+
+        int rpc = 0;
+        image.forEach<uchar>([&hasRemovePixel, &removeMask1, &rpc, this](const uchar &pixel, const int *position) {
             // ONLY REMOVE WHITE PIXEL
             if (pixel == uchar(0)) {
                 return;
@@ -66,8 +69,8 @@ void Image::thinning() {
              *   P4  P5* P6
              *   P7  P8  P9
              */
-            int centerX = position[0];
-            int centerY = position[1];
+            int centerX = position[1];
+            int centerY = position[0];
 
             uchar p1 = getPixel(centerX - 1, centerY - 1);
             uchar p2 = getPixel(centerX, centerY - 1);
@@ -93,12 +96,17 @@ void Image::thinning() {
             int upper = p2 && p4 && p6;
 
             if (nonZeroCount >= 2 && nonZeroCount <= 6 && (transformation == 1) && (right == 0) && (upper == 0)) {
-                setPixel(0, centerX, centerY);
+                removeMask1.data[centerY * image.cols + centerX] = 1;
+                rpc++;
                 hasRemovePixel = true;
             }
 
         });
-        image.forEach<uchar>([&hasRemovePixel, this](const uchar &pixel, const int *position) {
+        image.setTo(0, removeMask1);
+
+
+        Mat removeMask2 = Mat::zeros(image.rows, image.cols, CV_8U);
+        image.forEach<uchar>([&hasRemovePixel, &removeMask2, this](const uchar &pixel, const int *position) {
             // ONLY REMOVE WHITE PIXEL
             if (pixel == uchar(0)) {
                 return;
@@ -109,8 +117,8 @@ void Image::thinning() {
              *   P7  P8  P9
              *
              */
-            int centerX = position[0];
-            int centerY = position[1];
+            int centerX = position[1];
+            int centerY = position[0];
 
             uchar p1 = getPixel(centerX - 1, centerY - 1);
             uchar p2 = getPixel(centerX, centerY - 1);
@@ -136,14 +144,17 @@ void Image::thinning() {
             int down = p4 && p6 && p8;
 
             if (nonZeroCount >= 2 && nonZeroCount <= 6 && (transformation == 1) && (left == 0) && (down == 0)) {
-                setPixel(0, centerX, centerY);
+//                setPixel(0, centerX, centerY);
+                removeMask2.data[centerY * image.cols + centerX] = 1;
                 hasRemovePixel = true;
             }
 
         });
+        image.setTo(0, removeMask2);
+
         count++;
 
-        if (!hasRemovePixel || count > 1000) {
+        if (!hasRemovePixel) {
             break;
         }
 
