@@ -5,142 +5,149 @@
 		<Option title="ImageProcessing"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\packages\;CMake Files\packages\opencv-4.2.0\;CMake Files\packages\opencv-4.2.0\build\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\packages\;CMake Files\packages\opencv\;CMake Files\packages\opencv\build\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/user/CLionProjects/ImageProcessing/cmake-build-debug"/>
+				<Option working_dir="/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/user/CLionProjects/ImageProcessing/cmake-build-debug"/>
+				<Option working_dir="/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/user/CLionProjects/ImageProcessing/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ImageProcessing">
-				<Option output="/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/ImageProcessing" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/ImageProcessing/cmake-build-debug"/>
+				<Option output="/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/ImageProcessing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/build"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/core/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/flann/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/imgproc/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/ml/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/photo/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/dnn/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/features2d/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/gapi/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/imgcodecs/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/videoio/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/calib3d/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/highgui/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/objdetect/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/stitching/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/ts/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/video/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/build"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/core/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/flann/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/imgproc/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/ml/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/photo/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/dnn/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/features2d/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/gapi/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/imgcodecs/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/videoio/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/calib3d/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/highgui/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/objdetect/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/stitching/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/ts/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/video/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageProcessing"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageProcessing"/>
+					<CompileFile command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ImageProcessing/fast">
-				<Option output="/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/ImageProcessing" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/ImageProcessing/cmake-build-debug"/>
+				<Option output="/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/ImageProcessing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/build"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/core/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/flann/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/imgproc/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/ml/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/photo/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/dnn/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/features2d/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/gapi/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/imgcodecs/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/videoio/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/calib3d/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/highgui/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/objdetect/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/stitching/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/ts/include"/>
-					<Add directory="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/modules/video/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/build"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/core/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/flann/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/imgproc/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/ml/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/photo/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/dnn/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/features2d/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/gapi/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/imgcodecs/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/videoio/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/calib3d/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/highgui/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/objdetect/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/stitching/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/ts/include"/>
+					<Add directory="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/modules/video/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageProcessing/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageProcessing/fast"/>
+					<CompileFile command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -f &quot;/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/user/CLionProjects/ImageProcessing/include/ProcessMethod.h">
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/include/ProcessMethod.h">
 			<Option target="ImageProcessing"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/ImageProcessing/include/common.h">
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/ProcessMethod.cpp">
 			<Option target="ImageProcessing"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/ImageProcessing/src/ProcessMethod.cpp">
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/main.cpp">
 			<Option target="ImageProcessing"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/ImageProcessing/src/main.cpp">
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.cpp">
 			<Option target="ImageProcessing"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/ImageProcessing/CMakeLists.txt">
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.h">
+			<Option target="ImageProcessing"/>
+		</Unit>
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/build/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\packages\opencv-4.2.0\build\"/>
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/build/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\packages\opencv\build\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/build/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\packages\opencv-4.2.0\build\"/>
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/build/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\packages\opencv\build\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/ImageProcessing/packages/opencv-4.2.0/build/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\packages\opencv-4.2.0\build\"/>
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/packages/opencv/build/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\packages\opencv\build\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

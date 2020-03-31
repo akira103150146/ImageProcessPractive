@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Applications/CLion 2.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = /snap/clion/107/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = "/Applications/CLion 2.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/CLionProjects/ImageProcessing
+CMAKE_SOURCE_DIR = /home/akira/CLionProjects/ImageProcessPractive
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/CLionProjects/ImageProcessing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/user/CLionProjects/ImageProcessing/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Applications/CLion 2.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/107/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Applications/CLion 2.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/107/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles /Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/modules/OpenCvWrap/Image.o: src/modules/OpenCvWrap/Image.cpp.o
+
+.PHONY : src/modules/OpenCvWrap/Image.o
+
+# target to build an object file
+src/modules/OpenCvWrap/Image.cpp.o:
+	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o
+.PHONY : src/modules/OpenCvWrap/Image.cpp.o
+
+src/modules/OpenCvWrap/Image.i: src/modules/OpenCvWrap/Image.cpp.i
+
+.PHONY : src/modules/OpenCvWrap/Image.i
+
+# target to preprocess a source file
+src/modules/OpenCvWrap/Image.cpp.i:
+	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.i
+.PHONY : src/modules/OpenCvWrap/Image.cpp.i
+
+src/modules/OpenCvWrap/Image.s: src/modules/OpenCvWrap/Image.cpp.s
+
+.PHONY : src/modules/OpenCvWrap/Image.s
+
+# target to generate assembly for a file
+src/modules/OpenCvWrap/Image.cpp.s:
+	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.s
+.PHONY : src/modules/OpenCvWrap/Image.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -184,14 +211,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... ImageProcessing"
+	@echo "... edit_cache"
 	@echo "... src/ProcessMethod.o"
 	@echo "... src/ProcessMethod.i"
 	@echo "... src/ProcessMethod.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/modules/OpenCvWrap/Image.o"
+	@echo "... src/modules/OpenCvWrap/Image.i"
+	@echo "... src/modules/OpenCvWrap/Image.s"
 .PHONY : help
 
 

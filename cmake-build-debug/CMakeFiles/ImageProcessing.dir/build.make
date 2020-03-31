@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Applications/CLion 2.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = /snap/clion/107/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = "/Applications/CLion 2.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/CLionProjects/ImageProcessing
+CMAKE_SOURCE_DIR = /home/akira/CLionProjects/ImageProcessPractive
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/CLionProjects/ImageProcessing/cmake-build-debug
+CMAKE_BINARY_DIR = /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ImageProcessing.dir/depend.make
@@ -59,58 +59,73 @@ include CMakeFiles/ImageProcessing.dir/flags.make
 
 CMakeFiles/ImageProcessing.dir/src/main.cpp.o: CMakeFiles/ImageProcessing.dir/flags.make
 CMakeFiles/ImageProcessing.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ImageProcessing.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ImageProcessing.dir/src/main.cpp.o -c /Users/user/CLionProjects/ImageProcessing/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ImageProcessing.dir/src/main.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ImageProcessing.dir/src/main.cpp.o -c /home/akira/CLionProjects/ImageProcessPractive/src/main.cpp
 
 CMakeFiles/ImageProcessing.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ImageProcessing.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/ImageProcessing/src/main.cpp > CMakeFiles/ImageProcessing.dir/src/main.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akira/CLionProjects/ImageProcessPractive/src/main.cpp > CMakeFiles/ImageProcessing.dir/src/main.cpp.i
 
 CMakeFiles/ImageProcessing.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ImageProcessing.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/ImageProcessing/src/main.cpp -o CMakeFiles/ImageProcessing.dir/src/main.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akira/CLionProjects/ImageProcessPractive/src/main.cpp -o CMakeFiles/ImageProcessing.dir/src/main.cpp.s
 
 CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o: CMakeFiles/ImageProcessing.dir/flags.make
 CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o: ../src/ProcessMethod.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o -c /Users/user/CLionProjects/ImageProcessing/src/ProcessMethod.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o -c /home/akira/CLionProjects/ImageProcessPractive/src/ProcessMethod.cpp
 
 CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/ImageProcessing/src/ProcessMethod.cpp > CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akira/CLionProjects/ImageProcessPractive/src/ProcessMethod.cpp > CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.i
 
 CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/ImageProcessing/src/ProcessMethod.cpp -o CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akira/CLionProjects/ImageProcessPractive/src/ProcessMethod.cpp -o CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.s
+
+CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o: CMakeFiles/ImageProcessing.dir/flags.make
+CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o: ../src/modules/OpenCvWrap/Image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o -c /home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.cpp
+
+CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.cpp > CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.i
+
+CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.cpp -o CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.s
 
 # Object files for target ImageProcessing
 ImageProcessing_OBJECTS = \
 "CMakeFiles/ImageProcessing.dir/src/main.cpp.o" \
-"CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o"
+"CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o" \
+"CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o"
 
 # External object files for target ImageProcessing
 ImageProcessing_EXTERNAL_OBJECTS =
 
 ImageProcessing: CMakeFiles/ImageProcessing.dir/src/main.cpp.o
 ImageProcessing: CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o
+ImageProcessing: CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o
 ImageProcessing: CMakeFiles/ImageProcessing.dir/build.make
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_dnn.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_gapi.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_highgui.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_ml.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_objdetect.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_photo.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_stitching.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_video.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_videoio.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_imgcodecs.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_calib3d.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_features2d.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_flann.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_imgproc.4.2.0.dylib
-ImageProcessing: ../packages/opencv-4.2.0/build/lib/libopencv_core.4.2.0.dylib
+ImageProcessing: ../packages/opencv/build/lib/libopencv_dnn.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_gapi.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_highgui.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_ml.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_objdetect.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_photo.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_stitching.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_video.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_videoio.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_imgcodecs.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_calib3d.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_features2d.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_flann.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_imgproc.so.4.3.0
+ImageProcessing: ../packages/opencv/build/lib/libopencv_core.so.4.3.0
 ImageProcessing: CMakeFiles/ImageProcessing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ImageProcessing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ImageProcessing"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ImageProcessing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +138,6 @@ CMakeFiles/ImageProcessing.dir/clean:
 .PHONY : CMakeFiles/ImageProcessing.dir/clean
 
 CMakeFiles/ImageProcessing.dir/depend:
-	cd /Users/user/CLionProjects/ImageProcessing/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/CLionProjects/ImageProcessing /Users/user/CLionProjects/ImageProcessing /Users/user/CLionProjects/ImageProcessing/cmake-build-debug /Users/user/CLionProjects/ImageProcessing/cmake-build-debug /Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles/ImageProcessing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akira/CLionProjects/ImageProcessPractive /home/akira/CLionProjects/ImageProcessPractive /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles/ImageProcessing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ImageProcessing.dir/depend
 

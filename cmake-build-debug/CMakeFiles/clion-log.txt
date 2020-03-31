@@ -1,4 +1,4 @@
-"/Applications/CLion 2.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/user/CLionProjects/ImageProcessing
+/snap/clion/107/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/akira/CLionProjects/ImageProcessPractive
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/user/CLionProjects/ImageProcessing/cmake-build-debug
+-- Build files have been written to: /home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug

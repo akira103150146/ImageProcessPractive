@@ -4,32 +4,33 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/user/CLionProjects/ImageProcessing/src/ProcessMethod.cpp" "/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o"
-  "/Users/user/CLionProjects/ImageProcessing/src/main.cpp" "/Users/user/CLionProjects/ImageProcessing/cmake-build-debug/CMakeFiles/ImageProcessing.dir/src/main.cpp.o"
+  "/home/akira/CLionProjects/ImageProcessPractive/src/ProcessMethod.cpp" "/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles/ImageProcessing.dir/src/ProcessMethod.cpp.o"
+  "/home/akira/CLionProjects/ImageProcessPractive/src/main.cpp" "/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles/ImageProcessing.dir/src/main.cpp.o"
+  "/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.cpp" "/home/akira/CLionProjects/ImageProcessPractive/cmake-build-debug/CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Image.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
-  "../packages/opencv-4.2.0/build"
-  "../packages/opencv-4.2.0/include"
-  "../packages/opencv-4.2.0/modules/core/include"
-  "../packages/opencv-4.2.0/modules/flann/include"
-  "../packages/opencv-4.2.0/modules/imgproc/include"
-  "../packages/opencv-4.2.0/modules/ml/include"
-  "../packages/opencv-4.2.0/modules/photo/include"
-  "../packages/opencv-4.2.0/modules/dnn/include"
-  "../packages/opencv-4.2.0/modules/features2d/include"
-  "../packages/opencv-4.2.0/modules/gapi/include"
-  "../packages/opencv-4.2.0/modules/imgcodecs/include"
-  "../packages/opencv-4.2.0/modules/videoio/include"
-  "../packages/opencv-4.2.0/modules/calib3d/include"
-  "../packages/opencv-4.2.0/modules/highgui/include"
-  "../packages/opencv-4.2.0/modules/objdetect/include"
-  "../packages/opencv-4.2.0/modules/stitching/include"
-  "../packages/opencv-4.2.0/modules/ts/include"
-  "../packages/opencv-4.2.0/modules/video/include"
+  "../packages/opencv/build"
+  "../packages/opencv/include"
+  "../packages/opencv/modules/core/include"
+  "../packages/opencv/modules/flann/include"
+  "../packages/opencv/modules/imgproc/include"
+  "../packages/opencv/modules/ml/include"
+  "../packages/opencv/modules/photo/include"
+  "../packages/opencv/modules/dnn/include"
+  "../packages/opencv/modules/features2d/include"
+  "../packages/opencv/modules/gapi/include"
+  "../packages/opencv/modules/imgcodecs/include"
+  "../packages/opencv/modules/videoio/include"
+  "../packages/opencv/modules/calib3d/include"
+  "../packages/opencv/modules/highgui/include"
+  "../packages/opencv/modules/objdetect/include"
+  "../packages/opencv/modules/stitching/include"
+  "../packages/opencv/modules/ts/include"
+  "../packages/opencv/modules/video/include"
   )
 
 # Targets to which this target links.
