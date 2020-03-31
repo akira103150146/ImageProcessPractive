@@ -9,24 +9,18 @@ using namespace std;
 using namespace wrap;
 
 int main(int argc, char **argv) {
-    Image picture = Image("../images/images.png")
+    Image picture = Image("../images/horse.png")
             .toGrayImage()
-            .toBlackWhiteImage();
+            .toZeroOneImage();
 
-    //create a gui window:
+    picture.thinning();
+
 //    const char *winName = "Demo";
 //    namedWindow(winName, WINDOW_GUI_EXPANDED);
-
-//    picture.printPixels();
-    picture.iteratorWithWindow(1, [](const Mat &windowMatrix, const Pixel &centerPixel) {
-        cout << format("[%d]", (int) centerPixel.z);
-    });
-
-//    //display the image:0
-//    picture.showToWindow("Demo");
-//    picture.printPixels();
-
-    //wait for the user to press any key:
+//
+//    picture.toBlackWhiteImage()
+//            .showToWindow("Demo");
+//
 //    waitKey(0);
 
     return 0;

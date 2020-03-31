@@ -13,8 +13,6 @@ using namespace std;
 using namespace cv;
 
 namespace wrap {
-    typedef void (*WindowFunctor) (const Mat &windowMatrix, const Pixel &centerPixel);
-
     class Image {
     public:
         explicit Image(const string &path);
@@ -23,33 +21,45 @@ namespace wrap {
 
         ~Image();
 
-
         void showToWindow(const string &windowName);
 
         void printPixels();
 
         Image toGrayImage();
 
+        Image toZeroOneImage();
+
         Image toBlackWhiteImage();
 
-        void iteratorWithWindow(const int &distance, const WindowFunctor &callback);
+        void thinning();
 
     private:
         cv::Mat image;
     };
 
-    class WindowIterator {
+    class ThinningStrategyA {
     private:
-        cv::Mat image;
-        int distance;
+        [[nodiscard]] inline uchar getPixel(int x, int y) const;
 
-        WindowFunctor callback;
+        inline void setPixel(uchar value, int x, int y) const;
+
+        mutable cv::Mat inputSrc;
+
+        mutable bool hasRemovePixel;
+
+        mutable bool removeDirection;
     public:
-        WindowIterator(const cv::Mat &image, const int &distance, const WindowFunctor &callback);
+        explicit ThinningStrategyA(cv::Mat &src);
 
-        ~WindowIterator();
+        ~ThinningStrategyA();
 
-        void operator()(const Pixel &pixel, const int *position) const;
+        void operator()(const uchar &pixel, const int *position) const;
+
+        inline bool isDone() const;
+
+        inline void setImg(cv::Mat &src) const;
+
+        inline void resetStatus() const;
     };
 }
 
