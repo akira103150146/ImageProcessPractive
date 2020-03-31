@@ -9,19 +9,18 @@ using namespace std;
 using namespace wrap;
 
 int main(int argc, char **argv) {
-    Image picture = Image("../images/horse.png")
+    const char *winName = "Demo";
+    namedWindow(winName, WINDOW_GUI_EXPANDED);
+
+    Image picture = Image("../images/h.png")
             .toGrayImage()
             .toZeroOneImage();
 
     picture.thinning();
+    picture.toBlackWhiteImage()
+            .showToWindow("Demo");
 
-//    const char *winName = "Demo";
-//    namedWindow(winName, WINDOW_GUI_EXPANDED);
-//
-//    picture.toBlackWhiteImage()
-//            .showToWindow("Demo");
-//
-//    waitKey(0);
+    waitKey(0);
 
     return 0;
 

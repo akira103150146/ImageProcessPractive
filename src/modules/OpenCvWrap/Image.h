@@ -33,33 +33,12 @@ namespace wrap {
 
         void thinning();
 
-    private:
-        cv::Mat image;
-    };
-
-    class ThinningStrategyA {
-    private:
         [[nodiscard]] inline uchar getPixel(int x, int y) const;
 
         inline void setPixel(uchar value, int x, int y) const;
 
-        mutable cv::Mat inputSrc;
-
-        mutable bool hasRemovePixel;
-
-        mutable bool removeDirection;
-    public:
-        explicit ThinningStrategyA(cv::Mat &src);
-
-        ~ThinningStrategyA();
-
-        void operator()(const uchar &pixel, const int *position) const;
-
-        inline bool isDone() const;
-
-        inline void setImg(cv::Mat &src) const;
-
-        inline void resetStatus() const;
+    private:
+        cv::Mat image;
     };
 }
 
