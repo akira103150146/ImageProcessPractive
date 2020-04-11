@@ -128,6 +128,12 @@
 		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/main.cpp">
 			<Option target="ImageProcessing"/>
 		</Unit>
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Helper.cpp">
+			<Option target="ImageProcessing"/>
+		</Unit>
+		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Helper.h">
+			<Option target="ImageProcessing"/>
+		</Unit>
 		<Unit filename="/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.cpp">
 			<Option target="ImageProcessing"/>
 		</Unit>

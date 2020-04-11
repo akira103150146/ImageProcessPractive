@@ -150,6 +150,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/modules/OpenCvWrap/Helper.o: src/modules/OpenCvWrap/Helper.cpp.o
+
+.PHONY : src/modules/OpenCvWrap/Helper.o
+
+# target to build an object file
+src/modules/OpenCvWrap/Helper.cpp.o:
+	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Helper.cpp.o
+.PHONY : src/modules/OpenCvWrap/Helper.cpp.o
+
+src/modules/OpenCvWrap/Helper.i: src/modules/OpenCvWrap/Helper.cpp.i
+
+.PHONY : src/modules/OpenCvWrap/Helper.i
+
+# target to preprocess a source file
+src/modules/OpenCvWrap/Helper.cpp.i:
+	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Helper.cpp.i
+.PHONY : src/modules/OpenCvWrap/Helper.cpp.i
+
+src/modules/OpenCvWrap/Helper.s: src/modules/OpenCvWrap/Helper.cpp.s
+
+.PHONY : src/modules/OpenCvWrap/Helper.s
+
+# target to generate assembly for a file
+src/modules/OpenCvWrap/Helper.cpp.s:
+	$(MAKE) -f CMakeFiles/ImageProcessing.dir/build.make CMakeFiles/ImageProcessing.dir/src/modules/OpenCvWrap/Helper.cpp.s
+.PHONY : src/modules/OpenCvWrap/Helper.cpp.s
+
 src/modules/OpenCvWrap/Image.o: src/modules/OpenCvWrap/Image.cpp.o
 
 .PHONY : src/modules/OpenCvWrap/Image.o
@@ -189,6 +216,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/modules/OpenCvWrap/Helper.o"
+	@echo "... src/modules/OpenCvWrap/Helper.i"
+	@echo "... src/modules/OpenCvWrap/Helper.s"
 	@echo "... src/modules/OpenCvWrap/Image.o"
 	@echo "... src/modules/OpenCvWrap/Image.i"
 	@echo "... src/modules/OpenCvWrap/Image.s"

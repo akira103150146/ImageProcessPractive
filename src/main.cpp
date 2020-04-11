@@ -1,3 +1,5 @@
+#include <fstream>
+#include <filesystem>
 #include "opencv2/opencv.hpp"
 #include "opencv2/highgui/highgui.hpp"
 
@@ -8,10 +10,11 @@ using namespace cv;
 using namespace std;
 using namespace wrap;
 
-int main(int argc, char **argv) {
-    const char *winName = "Demo";
+void makeWindow(const string &winName) {
     namedWindow(winName, WINDOW_GUI_EXPANDED);
+}
 
+void runThinning() {
     Image picture = Image("../images/h.png")
             .toGrayImage()
             .toZeroOneImage();
@@ -19,9 +22,21 @@ int main(int argc, char **argv) {
     picture.thinning();
     picture.toBlackWhiteImage()
             .showToWindow("Demo");
+}
+
+void runFindCornerPoint() {
+    Image("../images/ntust.png")
+    .toGrayImage()
+    .gaussianFilter()
+    .detectHarrisCorner(100.0)
+    .showToWindow("Demo");
+}
+
+int main(int argc, char **argv) {
+    makeWindow("Demo");
+    runFindCornerPoint();
 
     waitKey(0);
 
     return 0;
-
 }

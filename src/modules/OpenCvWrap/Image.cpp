@@ -4,11 +4,12 @@
 
 #include <opencv2/imgcodecs.hpp>
 #include <utility>
+#include <fstream>
 #include "opencv2/opencv.hpp"
 #include "Image.h"
 #include "chrono"
+#include "Helper.h"
 
-using namespace cv;
 using namespace wrap;
 
 Image::Image(const std::string &path) {
@@ -29,25 +30,22 @@ void Image::printPixels() {
     cout << image;
 }
 
-Image Image::toGrayImage() {
-    Mat output;
-    cvtColor(image, output, COLOR_BGR2GRAY);
+Image &Image::toGrayImage() {
+    cvtColor(image, image, COLOR_BGR2GRAY);
 
-    return Image(output);
+    return *this;
 }
 
-Image Image::toZeroOneImage() {
-    Mat output;
-    threshold(image, output, 127, 1, THRESH_BINARY);
+Image &Image::toZeroOneImage() {
+    threshold(image, image, 127, 1, THRESH_BINARY);
 
-    return Image(output);
+    return *this;
 }
 
-Image Image::toBlackWhiteImage() {
-    Mat output;
-    threshold(image, output, 0.5, 255, THRESH_BINARY);
+Image &Image::toBlackWhiteImage() {
+    threshold(image, image, 0.5, 255, THRESH_BINARY);
 
-    return Image(output);
+    return *this;
 }
 
 void Image::thinning() {
@@ -167,6 +165,10 @@ void Image::setPixel(uchar value, int x, int y) const {
     image.data[y * image.cols + x] = value;
 }
 
+void Image::setPixel(double value, int x, int y) const {
+    image.data[y * image.cols + x] = value;
+}
+
 uchar Image::getPixel(int x, int y) const {
     int rows = image.rows;
     int cols = image.cols;
@@ -175,5 +177,85 @@ uchar Image::getPixel(int x, int y) const {
     if (index < 0 || index > rows * cols - 1) return uchar(0);
 
     return image.data[index];
+}
+
+Image &Image::gaussianFilter() {
+    Mat G = getGaussianMatrix(0.5);
+
+    Image result = Image(Mat::zeros(image.rows, image.cols, CV_8U));
+
+    image.forEach<double>([&G, &result, this](const double &pixel, const int *position) {
+        const int x = position[1];
+        const int y = position[0];
+
+        Mat neighbor;
+        getNeighbor(x, y, 3).convertTo(neighbor, CV_64F);
+
+        if (!neighbor.empty()) {
+            const double m_sum = sum(neighbor * G)[0] / 4.0;
+            result.setPixel(m_sum, x, y);
+        } else {
+            result.setPixel(pixel, x, y);
+        }
+    });
+
+    result.image.assignTo(image, CV_8U);
+
+    return *this;
+}
+
+Mat Image::getNeighbor(int x, int y, int size) const {
+    const int rad = size / 2;
+
+    try {
+        return image(Rect(x - rad, y - rad, size, size));
+    } catch (Exception &e) {
+        // ignore out of bound
+        return Mat();
+    }
+}
+
+Image &Image::detectHarrisCorner(double sigma) {
+    Mat dst = Mat::zeros(image.size(), CV_64F);
+
+    image.forEach<uchar>([this, &dst](const uchar &pixel, const int *position) {
+        const int x = position[1];
+        const int y = position[0];
+        /**
+         *    p1 p2
+         * p3 p4 p5
+         *    p6
+         */
+        const uchar p1 = getPixel(x, y - 1);
+        const uchar p2 = getPixel(x + 1, y - 1);
+        const uchar p3 = getPixel(x - 1, y);
+        const uchar p4 = getPixel(x, y);
+        const uchar p5 = getPixel(x + 1, y);
+        const uchar p6 = getPixel(x, y + 1);
+        const auto A = (double) (p5 + p3 - 2 * p4);
+        const auto B = (double) (p1 + p6 - 2 * p4);
+        const auto C = (double) (p4 + p2 - p1 - p5);
+
+        Mat M = (Mat_<double>(2, 2) << A, C, C, B);
+
+        double d = determinant(M) - 0.04 * pow(trace(M)[0], 2);
+        dst.data[y * dst.cols + x] = d;
+
+        if(d > 255) {
+            circle(
+                    dst,
+                    Point(x, y),
+                    5,
+                    Scalar(255),
+                    2,
+                    LineTypes::LINE_8,
+                    0
+            );
+        }
+    });
+
+    dst.assignTo(image, CV_32F);
+
+    return *this;
 }
 

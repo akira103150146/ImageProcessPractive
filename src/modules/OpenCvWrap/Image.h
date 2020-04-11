@@ -25,20 +25,28 @@ namespace wrap {
 
         void printPixels();
 
-        Image toGrayImage();
+        Image& toGrayImage();
 
-        Image toZeroOneImage();
+        Image& toZeroOneImage();
 
-        Image toBlackWhiteImage();
+        Image& toBlackWhiteImage();
 
         void thinning();
 
+        Image& gaussianFilter();
+
+        Image& detectHarrisCorner(double sigma);
+
         [[nodiscard]] inline uchar getPixel(int x, int y) const;
+
+        [[nodiscard]] inline Mat getNeighbor(int x, int y, int size) const;
 
         inline void setPixel(uchar value, int x, int y) const;
 
     private:
         cv::Mat image;
+
+        void setPixel(double value, int x, int y) const;
     };
 }
 
