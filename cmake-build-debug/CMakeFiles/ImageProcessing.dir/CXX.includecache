@@ -1055,10 +1055,6 @@ opencv2/core.hpp
 ../packages/opencv/modules/videoio/include/opencv2/opencv2/core.hpp
 
 /home/akira/CLionProjects/ImageProcessPractive/src/main.cpp
-fstream
--
-filesystem
--
 opencv2/opencv.hpp
 /home/akira/CLionProjects/ImageProcessPractive/src/opencv2/opencv.hpp
 opencv2/highgui/highgui.hpp
@@ -1067,6 +1063,24 @@ ProcessMethod.h
 /home/akira/CLionProjects/ImageProcessPractive/src/ProcessMethod.h
 modules/OpenCvWrap/Image.h
 /home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.h
+
+/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Helper.h
+opencv2/core/mat.hpp
+-
+
+/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.cpp
+opencv2/imgcodecs.hpp
+-
+utility
+-
+opencv2/opencv.hpp
+/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/opencv2/opencv.hpp
+Image.h
+/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.h
+chrono
+/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/chrono
+Helper.h
+/home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Helper.h
 
 /home/akira/CLionProjects/ImageProcessPractive/src/modules/OpenCvWrap/Image.h
 opencv2/core/mat.hpp
