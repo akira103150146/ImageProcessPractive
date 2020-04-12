@@ -180,8 +180,7 @@ uchar Image::getPixel(int x, int y) const {
 }
 
 Image &Image::gaussianFilter() {
-    Mat G = getGaussianMatrix(0.5);
-
+    Mat G = getGaussianMatrix(0.707);
     Image result = Image(Mat::zeros(image.rows, image.cols, CV_8U));
 
     image.forEach<double>([&G, &result, this](const double &pixel, const int *position) {
@@ -190,10 +189,11 @@ Image &Image::gaussianFilter() {
 
         Mat neighbor;
         getNeighbor(x, y, 3).convertTo(neighbor, CV_64F);
+        const double neighbor_sum = sum(neighbor)[0];
 
         if (!neighbor.empty()) {
-            const double m_sum = sum(neighbor * G)[0] / 4.0;
-            result.setPixel(m_sum, x, y);
+            const double m_sum = sum(neighbor * G)[0];
+            result.setPixel(m_sum * (m_sum / neighbor_sum), x, y);
         } else {
             result.setPixel(pixel, x, y);
         }
@@ -218,7 +218,7 @@ Mat Image::getNeighbor(int x, int y, int size) const {
 Image &Image::detectHarrisCorner(double sigma) {
     Mat dst = Mat::zeros(image.size(), CV_64F);
 
-    image.forEach<uchar>([this, &dst](const uchar &pixel, const int *position) {
+    image.forEach<uchar>([this, &dst, sigma](const uchar &pixel, const int *position) {
         const int x = position[1];
         const int y = position[0];
         /**
@@ -241,11 +241,11 @@ Image &Image::detectHarrisCorner(double sigma) {
         double d = determinant(M) - 0.04 * pow(trace(M)[0], 2);
         dst.data[y * dst.cols + x] = d;
 
-        if(d > 255) {
+        if (d > sigma) {
             circle(
                     dst,
                     Point(x, y),
-                    5,
+                    1,
                     Scalar(255),
                     2,
                     LineTypes::LINE_8,
@@ -254,7 +254,7 @@ Image &Image::detectHarrisCorner(double sigma) {
         }
     });
 
-    dst.assignTo(image, CV_32F);
+    dst.assignTo(image, CV_8U);
 
     return *this;
 }

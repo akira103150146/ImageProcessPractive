@@ -25,15 +25,19 @@ void runThinning() {
 }
 
 void runFindCornerPoint() {
-    Image("../images/ntust.png")
+    makeWindow("Demo");
+    makeWindow("Harris");
+
+    auto image = Image("../images/ntust.png");
+    image.showToWindow("Demo");
+    image
     .toGrayImage()
     .gaussianFilter()
-    .detectHarrisCorner(100.0)
-    .showToWindow("Demo");
+    .detectHarrisCorner(255.0)
+    .showToWindow("Harris");
 }
 
 int main(int argc, char **argv) {
-    makeWindow("Demo");
     runFindCornerPoint();
 
     waitKey(0);

@@ -7,12 +7,12 @@
 #include "opencv2/opencv.hpp"
 
 cv::Mat getGaussianMatrix(float sigma) {
-     cv::Mat temp = (cv::Mat_<double>(3, 3) <<
-             exp(-2), exp(-1), exp(-2),
-             exp(-1), 1.0, exp(-1),
-             exp(-2), exp(-1), exp(-2));
+    const double beta = 2 * pow(sigma, 2);
 
-     double div = cv::sum(temp)[0];
+    cv::Mat G =  (cv::Mat_<double>(3, 3) <<
+            exp(-2 / beta), exp(-1 / beta), exp(-2 / beta),
+            exp(-1 / beta), exp(0), exp(-1 / beta),
+            exp(-2 / beta), exp(-1/ beta), exp(-2 / beta));
 
-     return temp / div;
+    return G / sum(G)[0];
 }
